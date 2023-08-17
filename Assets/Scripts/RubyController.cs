@@ -18,11 +18,16 @@ public class RubyController : MonoBehaviour
     float horizontal;
     float vertical;
 
+    private Animator animator;
+    Vector2 lookDirection = new Vector2(1, 0);
+
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
 
         currentHealth = maxHealth;
+
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -39,6 +44,21 @@ public class RubyController : MonoBehaviour
         // 获取轴输入
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+
+        Vector2 move = new Vector2(horizontal, vertical);
+        // 如果x,y不全为0
+        if(!Mathf.Approximately(move.x, 0) || !Mathf.Approximately(move.y, 0))
+        {
+            // 设置lookDirection
+            lookDirection.Set(move.x, move.y);
+            // 归一化
+            lookDirection.Normalize();
+        }
+
+        // 设置动画机参数
+        animator.SetFloat("Look X", lookDirection.x);
+        animator.SetFloat("Look Y", lookDirection.y);
+        animator.SetFloat("Speed", move.magnitude);
 
         // 无敌时间倒计时
         // 如果处于无敌状态
@@ -64,6 +84,7 @@ public class RubyController : MonoBehaviour
         // 如果玩家受伤
         if (amount < 0)
         {
+            animator.SetTrigger("Hit");
             // 如果处于无敌状态
             if (isInvincible)
                 return;

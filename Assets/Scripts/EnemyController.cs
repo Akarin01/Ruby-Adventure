@@ -12,10 +12,13 @@ public class EnemyController : MonoBehaviour
     private int direction = 1;
 
     private Rigidbody2D rigidbody2d;
+    private Animator animator;
 
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+
+        animator = GetComponent<Animator>();
 
         timer = changeTime;
     }
@@ -28,10 +31,17 @@ public class EnemyController : MonoBehaviour
         if (vertical)
         {
             position.y = position.y + speed * Time.deltaTime * direction;
+
+            // 设置动画机参数
+            animator.SetFloat("Move X", 0);
+            animator.SetFloat("Move Y", direction);
         }
         else
         {
             position.x = position.x + speed * Time.deltaTime * direction;
+
+            animator.SetFloat("Move X", direction);
+            animator.SetFloat("Move Y", 0);
         }
 
         rigidbody2d.MovePosition(position);
