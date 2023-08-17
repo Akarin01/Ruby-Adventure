@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealthCollection : MonoBehaviour
 {
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         RubyController controller = collision.GetComponent<RubyController>();

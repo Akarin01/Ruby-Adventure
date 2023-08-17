@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1781270568721404524}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,7 +123,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0057905167, y: 0.1474474}
+  m_Offset: {x: 0.0057905167, y: 0.31400025}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -133,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45703015, y: 0.24084961}
+  m_Size: {x: 0.45703015, y: 0.5739553}
   m_EdgeRadius: 0
 --- !u!95 &2476545375932778285
 Animator:
@@ -171,3 +172,72 @@ MonoBehaviour:
   speed: 3
   vertical: 0
   changeTime: 2
+  smokeEffect: {fileID: 1781270568721404526}
+  explosionEffect: {fileID: 4310217107492426143, guid: 3803c539cb46e2e4cb294c04cfbd5bec, type: 3}
+--- !u!1001 &4404976423927836917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8853644290773541254}
+    m_Modifications:
+    - target: {fileID: 2709415028876845702, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_Name
+      value: Smoke Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.599
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+--- !u!4 &1781270568721404524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2709415028876845721, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+  m_PrefabInstance: {fileID: 4404976423927836917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1781270568721404526 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2709415028876845723, guid: 19690bc486954ae4fb21920acdd94d9b, type: 3}
+  m_PrefabInstance: {fileID: 4404976423927836917}
+  m_PrefabAsset: {fileID: 0}

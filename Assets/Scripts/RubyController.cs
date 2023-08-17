@@ -21,13 +21,14 @@ public class RubyController : MonoBehaviour
     private Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
 
+    public GameObject projectilePrefab;
+
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         currentHealth = maxHealth;
-
-        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -73,6 +74,27 @@ public class RubyController : MonoBehaviour
                 isInvincible = false;
             }
         }
+
+        // 当按下C键
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            // 调用Launch方法
+            Launch();
+        }
+    }
+
+    void Launch()
+    {
+        // 实例化projectileProfab
+        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+
+        // 获取该物体身上的projectile组件
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        // 调用该组件的Launch方法
+        projectile.Launch(lookDirection, 300f);
+
+        // 设置动画机参数
+        animator.SetTrigger("Launch");
     }
 
     /// <summary>
