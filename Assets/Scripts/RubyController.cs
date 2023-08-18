@@ -118,6 +118,7 @@ public class RubyController : MonoBehaviour
 
         // 修改玩家生命值
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log($"{currentHealth}/{maxHealth}");
+        // 设置UIHealthBar的值
+        UIHealthBar.Instance.SetValue((float)currentHealth / maxHealth);
     }
 }
