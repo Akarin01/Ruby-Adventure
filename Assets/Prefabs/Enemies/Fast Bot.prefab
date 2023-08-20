@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &8853644290773541248
 Rigidbody2D:
   serializedVersion: 4
@@ -173,7 +173,6 @@ MonoBehaviour:
   vertical: 0
   changeTime: 2
   smokeEffect: {fileID: 1781270568721404526}
-  explosionEffect: {fileID: 4310217107492426143, guid: 3803c539cb46e2e4cb294c04cfbd5bec, type: 3}
 --- !u!1001 &4404976423927836917
 PrefabInstance:
   m_ObjectHideFlags: 0

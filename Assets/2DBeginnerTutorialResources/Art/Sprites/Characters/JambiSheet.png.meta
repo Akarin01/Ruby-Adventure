@@ -12,7 +12,7 @@ TextureImporter:
       213: 21300004
     second: JambiIdle3
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -72,6 +72,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -97,11 +98,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JambiIdle1
+      name: JambiSheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b9f29c444b3a0a488d9e380dd4e476f
-      internalID: 21300000
+      spriteID: da7906b92408ef449930ee43c5541c60
+      internalID: -2125070654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JambiIdle2
+      name: JambiSheet_1
       rect:
         serializedVersion: 2
         x: 256
@@ -136,14 +149,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac704b7ce23e935479b6b68735992ca3
-      internalID: 21300002
+      spriteID: 063ec3c9a7e8c0e4fa2fb92533bd6136
+      internalID: 767275498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JambiIdle3
+      name: JambiSheet_2
       rect:
         serializedVersion: 2
         x: 512
@@ -157,8 +170,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caa29f31bb01b004a92b38edc46f72f3
-      internalID: 21300004
+      spriteID: 6b01f35ca82402d4f801b9e8d71cbc52
+      internalID: -1099231918
       vertices: []
       indices: 
       edges: []
@@ -174,9 +187,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      JambiIdle1: 21300000
-      JambiIdle2: 21300002
-      JambiIdle3: 21300004
+      JambiSheet_0: -2125070654
+      JambiSheet_1: 767275498
+      JambiSheet_2: -1099231918
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
